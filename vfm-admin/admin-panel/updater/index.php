@@ -55,7 +55,7 @@ if (isset($response['logs'])) {
                 License
             </div>
             <div class="card-body purchase-key-group">
-                <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>?section=updates&action=update">
+                <form role="form" method="post" action="<?php echo htmlspecialchars($setUp->getConfig('prefix_proxy_reversed').$_SERVER['PHP_SELF']);?>?section=updates&action=update">
                 <div class="input-group mb-3">
                     <label for="purchase-code" class="input-group-text">Purchase code</label>
                     <input type="text" class="form-control fake-key <?php echo $licenseclass; ?>" placeholder="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX">

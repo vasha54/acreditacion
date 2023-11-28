@@ -204,7 +204,7 @@ $scrollspy_data = $activesec == "home" ? ' data-bs-spy="scroll" data-bs-target="
                 </div>
                     <?php echo $admin->printAlert(); ?>
                 <div class="content">
-                    <form role="form" method="post" id="settings-form" autocomplete="off" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>?section=appearance" enctype="multipart/form-data">
+                    <form role="form" method="post" id="settings-form" autocomplete="off" action="<?php echo htmlspecialchars($setUp->getConfig('prefix_proxy_reversed').$_SERVER['PHP_SELF']);?>?section=appearance" enctype="multipart/form-data">
                     <?php
                     include dirname(__FILE__).'/admin-panel/view/appearance/appearance.php';
                     include dirname(__FILE__).'/admin-panel/view/save-settings.php'; ?>
@@ -284,7 +284,7 @@ $scrollspy_data = $activesec == "home" ? ' data-bs-spy="scroll" data-bs-target="
                 </div>
                 <?php echo $admin->printAlert(); ?>
                 <div class="content">
-                    <form class="position-relative" role="form" method="post" id="settings-form" autocomplete="off" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" enctype="multipart/form-data">
+                    <form class="position-relative" role="form" method="post" id="settings-form" autocomplete="off" action="<?php echo htmlspecialchars($setUp->getConfig('prefix_proxy_reversed').$_SERVER['PHP_SELF']);?>" enctype="multipart/form-data">
                         <?php
                         include dirname(__FILE__).'/admin-panel/view/dashboard/general.php';
                         include dirname(__FILE__).'/admin-panel/view/dashboard/uploads.php';

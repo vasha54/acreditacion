@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-sm-6">
-        <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>?section=translations&action=edit">
+        <form role="form" method="post" action="<?php echo htmlspecialchars($setUp->getConfig('prefix_proxy_reversed').$_SERVER['PHP_SELF']);?>?section=translations&action=edit">
             <div class="card">
                 <div class="card-header">
                     <?php print $setUp->getString("edit_language"); ?>
@@ -38,7 +38,7 @@
     }
     ?>
     <div class="col-sm-6">
-        <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>?section=translations&action=edit">
+        <form role="form" method="post" action="<?php echo htmlspecialchars($setUp->getConfig('prefix_proxy_reversed').$_SERVER['PHP_SELF']);?>?section=translations&action=edit">
             <div class="card">
                 <div class="card-header">
                     <?php echo $setUp->getString("new_language"); ?>

@@ -33,7 +33,7 @@ $getusr = filter_input(INPUT_GET, "usr", FILTER_SANITIZE_SPECIAL_CHARS);
  */
 if ($getusr && $resetter->checkTok($getrp, $getusr) == true) : ?>
 
-        <form role="form" method="post" id="rpForm" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>">
+        <form role="form" method="post" id="rpForm" action="<?php echo htmlentities($setUp->getConfig('prefix_proxy_reversed').$_SERVER['PHP_SELF']); ?>">
 
             <div class="sendresponse"></div>
 
@@ -110,7 +110,7 @@ if (!$getusr || $resetter->checkTok($getrp, $getusr) !== true) :
     }
     $pulito = $setUp->getConfig("script_url");
     ?>
-            <form role="form" method="post" id="sendpwd" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+            <form role="form" method="post" id="sendpwd" action="<?php echo htmlspecialchars($setUp->getConfig('prefix_proxy_reversed').$_SERVER['PHP_SELF']);?>">
                 <div class="sendresponse"></div>
                 <input name="cleanurl" type="hidden" value="<?php echo $pulito; ?>">
                 <input name="thislang" type="hidden" value="<?php echo $setUp->lang; ?>">

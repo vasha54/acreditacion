@@ -23,7 +23,7 @@ $kingmail = isset($king['email']) ? $king['email'] : "";
 <div class="modal fade" tabindex="-1" role="dialog" id="newuserpanel">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-        <form role="form" method="post" autocomplete="off" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>?section=users&action=new" class="clear intero" enctype="multipart/form-data" id="newUsrForm">
+        <form role="form" method="post" autocomplete="off" action="<?php echo htmlspecialchars($setUp->getConfig('prefix_proxy_reversed').$_SERVER['PHP_SELF']);?>?section=users&action=new" class="clear intero" enctype="multipart/form-data" id="newUsrForm">
             <div class="modal-header">
                 <h4 class="modal-title">
                     <i class="bi bi-person-plus"></i> <?php print $setUp->getString("new_user"); ?>

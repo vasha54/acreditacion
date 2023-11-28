@@ -197,7 +197,7 @@ if ($getdownloadlist && file_exists($share_json)) {
             </div>
             <div class="col-sm-4 card">
                 <div class="card-body">
-                <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING']);?>">
+                <form method="post" action="<?php echo htmlspecialchars($setUp->getConfig('prefix_proxy_reversed').$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING']);?>">
                 <?php
                 if (strlen($pass) > 0) {
                     if ($postpass && $passpass !== true) {

@@ -22,7 +22,7 @@ if ($location->editAllowed() && ($gateKeeper->isAllowed('upload_enable') || $gat
     <section class="vfmblock uploadarea py-2 col-12">
         <div class="row">
     <?php
-    $post_url = Utils::removeQS($_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'], array('response'));
+    $post_url = Utils::removeQS($setUp->getConfig('prefix_proxy_reversed').$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'], array('response'));
 
     /**
      * Upload files

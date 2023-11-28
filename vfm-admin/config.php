@@ -3,7 +3,8 @@
  $_CONFIG = array (
   'firstrun' => false,
   'salt' => 'acdacd58df23153170e65b993e44a036',
-  'script_url' => 'http://acreditacion.cidra.cu/',
+  //'script_url' => 'http://acreditacion.cidra.cu/',
+  'script_url' => 'https://eva.umcc.cu/acreditacion/',
   'session_name' => 'vfm_784626692',
   'align_logo' => 'center',
   'appname' => 'Sistema de Gestión Documental para la Acreditación de Carreras Universitarias',
@@ -94,7 +95,7 @@
   'share_thumbnails' => true,
   'share_playmusic' => true,
   'share_playvideo' => true,
-  'show_captcha' => true,
+  'show_captcha' => false,
   'show_captcha_download' => true,
   'show_captcha_register' => true,
   'show_captcha_reset' => true,
@@ -181,4 +182,7 @@
   'superadmin_can_updates' => true,
   'top_pagination' => false,
   'top_pagination_folder' => false,
+  /* Configuraciones adicionales*/
+  //'prefix_proxy_reversed' => '/acreditacion',
+  'prefix_proxy_reversed' => '',
 );

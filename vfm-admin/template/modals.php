@@ -205,7 +205,7 @@ if ($gateKeeper->isAccessAllowed()) {
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING']);?>">
+                        <form role="form" method="post" action="<?php echo htmlspecialchars($setUp->getConfig('prefix_proxy_reversed').$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING']);?>">
                             <input readonly name="thisdir" type="hidden" class="form-control" id="dir">
                             <input readonly name="thisext" type="hidden" class="form-control" id="ext">
                             <input readonly name="oldname" type="hidden" class="form-control" id="oldname">

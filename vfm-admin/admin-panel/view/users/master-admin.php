@@ -12,7 +12,7 @@
 <div class="modal fade" tabindex="-1" role="dialog" id="masteradminpanel">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <form role="form" method="post" autocomplete="off" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>?section=users&action=updatemaster" enctype="multipart/form-data">
+            <form role="form" method="post" autocomplete="off" action="<?php echo htmlspecialchars($setUp->getConfig('prefix_proxy_reversed').$_SERVER['PHP_SELF']);?>?section=users&action=updatemaster" enctype="multipart/form-data">
                 <div class="modal-header">          
                     <h4 class="modal-title"><i class="bi bi-gem"></i> Master Admin</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

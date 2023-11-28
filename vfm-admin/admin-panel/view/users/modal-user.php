@@ -11,7 +11,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form role="form" method="post" autocomplete="off" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>?section=users&action=update" enctype="multipart/form-data" class="removegroup">
+                <form role="form" method="post" autocomplete="off" action="<?php echo htmlspecialchars($setUp->getConfig('prefix_proxy_reversed').$_SERVER['PHP_SELF']);?>?section=users&action=update" enctype="multipart/form-data" class="removegroup">
                     <div class="row">
                         <div class="col-md-6 form-group mb-3">
                             <label class="form-label"><?php echo $setUp->getString("username"); ?></label>

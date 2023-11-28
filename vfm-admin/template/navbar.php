@@ -196,7 +196,7 @@ if ($gateKeeper->isUserLoggedIn() && $setUp->getConfig("show_usermenu") == true)
               </li>
             </ul>
 
-            <form role="form" method="post" id="usrForm" autocomplete="off" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING']);?>">
+            <form role="form" method="post" id="usrForm" autocomplete="off" action="<?php echo htmlspecialchars($setUp->getConfig('prefix_proxy_reversed').$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING']);?>">
             <div class="tab-content">
               <div role="tabpanel" class="tab-pane fade text-center" id="upava" role="tabpanel">
                 <div class="avatar-response"></div>
