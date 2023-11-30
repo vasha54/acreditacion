@@ -37,20 +37,21 @@ if (!$showdesc && !$showlogo) {
 if ($showlogo) {
     $logopath = "vfm-admin/_content/uploads/";
     ?>
-    <div class="<?php echo $setwide; ?>">
+     <!--  <div class="<?php echo $setwide; ?>">
         <div class="head-banner text-<?php echo $logoAlignment; ?>">
             <a href="<?php echo $setUp->getConfig("script_url"); ?>">
-                <img alt="<?php echo $setUp->getConfig('appname'); ?>" src="<?php print $logopath.$setUp->getConfig('logo'); ?>"<?php echo $logo_margin; ?>>
+                <img alt="<?php echo $setUp->getConfig('app_short_name'); ?>" src="<?php print $logopath.$setUp->getConfig('logouniversity'); ?>"<?php echo $logo_margin; ?>>
+                <span style="color:white; "><?php print $setUp->getConfig('appname'); ?></span>
             </a>
         </div>
-    </div>
+    </div> -->  
     <?php
 }
 // Description
 if ($showdesc) { ?>
-    <div class="container">                      
+    <!-- <div class="container">                      
         <div class="description lead"><?php echo $fulldesc; ?></div> 
-    </div> <!-- .container -->
+    </div> --> <!-- .container -->
     <?php
 } ?>
 </header>

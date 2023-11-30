@@ -22,6 +22,7 @@ if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
     $_CONFIG['log_file'] = (isset($_POST['log_file']) ? true : false);
 
     $postappname = filter_input(INPUT_POST, "appname", FILTER_SANITIZE_SPECIAL_CHARS);
+    $postappnameshort = filter_input(INPUT_POST, "appshortname", FILTER_SANITIZE_SPECIAL_CHARS);
 
     $selectivext = filter_input(INPUT_POST, "selectivext", FILTER_SANITIZE_SPECIAL_CHARS);
 
@@ -74,6 +75,8 @@ if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
     $_CONFIG['default_timezone'] = $timezone ? $timezone : "UTC";
 
     $_CONFIG['appname'] = $postappname;
+
+    $_CONFIG['appshortname'] = $postappnameshort;
 
     $_CONFIG['selectivext'] = $selectivext;
 

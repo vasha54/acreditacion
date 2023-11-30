@@ -36,6 +36,10 @@ function tzList()
                                 <label class="form-label"><?php print $setUp->getString("app_name"); ?></label>
                                 <input type="text" class="form-control" value="<?php print $setUp->getConfig('appname'); ?>" name="appname">
                             </div>
+                            <div class="form-group mb-2">
+                                <label class="form-label"><?php print $setUp->getString("app_name_short"); ?></label>
+                                <input type="text" maxlength="6" class="form-control" value="<?php print $setUp->getConfig('appshortname'); ?>" name="appshortname">
+                            </div>
                             <div class="row mb-2">
                                 <div class="col-12">
 <?php $formchecked = $setUp->getConfig('show_usermenu') ? ' checked' : ''; ?>

@@ -25,7 +25,6 @@
   'alignment' => 'Alignment',
   'allowed_ext' => 'Allowed extensions',
   'app_name' => 'Title',
-  'app_short_name' => 'Name short',
   'appearance' => 'Appearance',
   'append_date' => 'Append date',
   'application_url' => 'The URL of your app',

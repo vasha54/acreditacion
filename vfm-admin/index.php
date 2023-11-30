@@ -145,7 +145,8 @@ $scrollspy_data = $activesec == "home" ? ' data-bs-spy="scroll" data-bs-target="
 
 <header class="navbar fixed-top bg-dark flex-md-nowrap shadow navbar-expand">
     <div class="container-fluid">
-        <a class="navbar-brand me-0 px-3 flex-grow-1" href="./"><?php print $setUp->getConfig('appname'); ?></a>
+        <a class="navbar-brand me-0 px-3 flex-grow-1" href="./">
+                <img style="height: 26px;" src="<?php echo $setUp->getConfig('prefix_proxy_reversed').'/vfm-admin/icons/'.$setUp->getConfig('navbar_logo').'.png'; ?>"><?php print $setUp->getConfig('appshortname'); ?></a>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav ms-auto">
                 <li class="nav-item d-inline-block d-md-none">

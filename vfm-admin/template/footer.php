@@ -22,6 +22,9 @@ $privacy = file_exists($privacy_file) ? file_get_contents($privacy_file) : false
     <div class="container">
         <div class="row">
         <div class="col-sm-12">
+            <a href="<?php echo $setUp->getConfig('url_university'); ?>" target="_blank">
+                <img src="<?php echo $setUp->getConfig('script_url')."vfm-admin/icons/logo_um_white.svg"; ?>" alt="" style="width:60px;" />
+            </a>
             <a href="<?php echo $setUp->getConfig('script_url'); ?>">
                 <?php echo $setUp->getConfig("appname"); ?>
             </a> &copy; <?php echo date('Y'); ?>

@@ -25,7 +25,6 @@
   'alignment' => 'alineación',
   'allowed_ext' => 'Extensiones permitidas',
   'app_name' => 'Título ',
-  'app_short_name' => 'Nombre corto',
   'appearance' => 'Apariencia',
   'append_date' => 'Agregar fecha',
   'application_url' => 'La URL de su aplicación',

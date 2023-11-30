@@ -27,10 +27,12 @@ $navbarclass = $setUp->getConfig("header_position") == 'above' ? '' : ' fixed-to
             <a class="navbar-brand" href="<?php echo $setUp->getConfig("script_url"); ?>">
                 <?php
                 if ($setUp->getConfig('navbar_logo')) { ?>
-                    <img src="<?php echo $stepback.'_content/uploads/'.$setUp->getConfig('navbar_logo'); ?>">
+                    <img src="<?php echo $setUp->getConfig('script_url').'vfm-admin/icons/'.$setUp->getConfig('navbar_logo').'.png'; ?>">
+
                     <?php
+                    echo $setUp->getConfig("appshortname");
                 } else {
-                    echo $setUp->getConfig("appname");
+                    echo $setUp->getConfig("appshortname");
                 } ?>
             </a>
                 <?php
