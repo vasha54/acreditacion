@@ -94,7 +94,7 @@
   'share_thumbnails' => true,
   'share_playmusic' => true,
   'share_playvideo' => true,
-  'show_captcha' => false,
+  'show_captcha' => true,
   'show_captcha_download' => true,
   'show_captcha_register' => true,
   'show_captcha_reset' => true,
