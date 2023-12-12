@@ -47,6 +47,8 @@ if (!$activesec || $activesec == 'home') {
                     <span><?php echo $setUp->getString("security"); ?></span></a>
                 <a class="nav-link ps-4" href="#view-activities"><i class="bi bi-bar-chart-line"></i> 
                     <span><?php echo $setUp->getString("activity_register"); ?></span></a>
+                <a class="nav-link ps-4" href="#view-create-directory"><i class="bi bi-folder"></i> 
+                    <span><?php echo $setUp->getString("create_directory"); ?></span></a>    
             </nav>
             <?php
         } else { ?>

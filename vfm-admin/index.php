@@ -296,6 +296,7 @@ $scrollspy_data = $activesec == "home" ? ' data-bs-spy="scroll" data-bs-target="
                         include dirname(__FILE__).'/admin-panel/view/dashboard/email.php';
                         include dirname(__FILE__).'/admin-panel/view/dashboard/security.php';
                         include dirname(__FILE__).'/admin-panel/view/dashboard/activities.php';
+                        include dirname(__FILE__).'/admin-panel/view/dashboard/createdirectory.php';
                         include dirname(__FILE__).'/admin-panel/view/save-settings.php';
                         ?>
                         <div class="form-group">       
