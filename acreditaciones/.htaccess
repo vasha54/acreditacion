@@ -8,7 +8,5 @@ RemoveHandler .php
 <IfModule mod_php5.c>
 php_flag engine off
 </IfModule>
-Order Deny,Allow
-Deny from all
 Options -Indexes
 # end VFM rules
