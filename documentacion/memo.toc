@@ -1,0 +1,8 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}Introducción}{2}{section.1}%
+\contentsline {section}{\numberline {2}Roles del sistema}{2}{section.2}%
+\contentsline {section}{\numberline {3}Usuarios y contraseñas}{2}{section.3}%
+\contentsline {section}{\numberline {4}Veno File Manager \emph {VFM}}{2}{section.4}%
+\contentsline {section}{\numberline {5}Instalación}{2}{section.5}%
+\contentsline {section}{\numberline {6}Personalización}{2}{section.6}%
+\contentsline {section}{\numberline {7}Problemas o errores encontrados}{2}{section.7}%
