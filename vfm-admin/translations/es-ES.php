@@ -331,4 +331,11 @@
   'your_ip' => 'Tu dirección IP',
   'your_new_username_is' => 'Tu nuevo nombre de usuario es:',
   'zip_multiple_files' => 'Zip varios archivos ',
+  'year'=>'Año',
+  'name'=>'Nombre',
+  'others'=>'Otro',
+  'master'=>'Maestría',
+  'doctorate'=>'Doctorado',
+  'type_acreditation'=>'Tipo de acreditación',
+  'institutional'=>'Institucional',
 );

@@ -16,56 +16,52 @@
             <div class="collapse show" id="card-create-directory">
             <div class="card-body">
                 <div class="row">
-                    <div class="col-md-4">
-                        <?php $formchecked = $setUp->getConfig('log_file') ? ' checked' : ''; ?>
-                        <div class="form-check form-switch">
-                            <input class="form-check-input" role="switch" type="checkbox" name="log_file" id="log_file" <?php echo $formchecked; ?>>
-                            <label class="form-check-label" for="log_file"><?php print $setUp->getString("statistics"); ?></label>
-                        </div>
-                    </div> <!-- col 4 -->
-
+                    <div class="col-md-2">
+                        <label class="form-label"><?php echo $setUp->getString("year"); ?></label>
+                        <select class="form-select" name="year_directory">
+                            <?php
+                                $current_year = date('Y');
+                                $min_year = $current_year - 10;
+                                $max_year = $current_year + 10;
+                                for ($i=$min_year; $i <= $max_year; $i++) {  
+                                    if($i == $current_year){
+                            ?>
+                                    <option value="<?php echo $i; ?>" selected ><?php echo $i; ?></option>
+                            <?php   }else{
+                            ?>
+                                    <option value="<?php echo $i; ?>" ><?php echo $i; ?></option>
+                            <?php  }
+                                } 
+                            ?>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label"><?php echo $setUp->getString("type_acreditation"); ?></label>
+                        <select class="form-select" name="type_acreditation">
+                            <?php
+                            foreach ($setUp->getConfig("type_acreditation") as $key => $value) {
+                                ?>
+                                <option value="<?php echo $key; ?>" ><?php echo $setUp->getString($value); ?></option>
+                                <?php
+                            } ?>
+                        </select>    
+                    </div>
                     <div class="col-md-8">
                         <div class="row">
-                            <div class="col-sm-6 mb-2">
-                                <label class="form-label"><i class="bi bi-envelope"></i> <?php echo $setUp->getString("email_notifications"); ?></label>
-                                <input type="email" placeholder="admin1@mail.ext, admin2@ma..." class="form-control" name="upload_email" value="<?php echo $setUp->getConfig('upload_email'); ?>" multiple>
+                            <label class="form-label col-md-12"><?php echo $setUp->getString("name"); ?></label>    
+                        </div>
+                        <div class="row">
+                            <div class="col-md-10">
+                                <input class="form-control"  type="text" name="name_directory" id="name_directory">        
                             </div>
-
-                            <div class="col-sm-6">
-                                <label class="form-label"><?php echo $setUp->getString("activities"); ?></label>
-                                <div class="form-group">
-                                    <?php $formchecked = $setUp->getConfig('notify_login') ? ' checked' : ''; ?>
-                                    <div class="d-inline-block me-1 mb-2">
-                                        <input class="btn-check" type="checkbox" name="notify_login" id="notify_login" autocomplete="off"<?php echo $formchecked; ?>>
-                                        <label class="btn btn-outline-primary tooltipper" for="notify_login" data-bs-placement="top" data-bs-toggle="tooltip" title="<?php echo $setUp->getString("notify_login"); ?>"><i class="bi bi-box-arrow-in-right"></i></label>
-                                    </div>
-                                    <?php $formchecked = $setUp->getConfig('notify_upload') ? ' checked' : ''; ?>
-                                    <div class="d-inline-block me-1 mb-2">
-                                        <input class="btn-check" type="checkbox" name="notify_upload" id="notify_upload" autocomplete="off"<?php echo $formchecked; ?>>
-                                        <label class="btn btn-outline-primary tooltipper" for="notify_upload" data-bs-placement="top" data-bs-toggle="tooltip" title="<?php echo $setUp->getString("notify_upload"); ?>"><i class="bi bi-cloud-arrow-up"></i></label>
-                                    </div>
-                                    <?php $formchecked = $setUp->getConfig('notify_download') ? ' checked' : ''; ?>
-                                    <div class="d-inline-block me-1 mb-2">
-                                        <input class="btn-check" type="checkbox" name="notify_download" id="notify_download" autocomplete="off"<?php echo $formchecked; ?>>
-                                        <label class="btn btn-outline-primary tooltipper" for="notify_download" data-bs-placement="top" data-bs-toggle="tooltip" title="<?php echo $setUp->getString("notify_download"); ?>"><i class="bi bi-download"></i></label>
-                                    </div>
-                                    <?php $formchecked = $setUp->getConfig('notify_newfolder') ? ' checked' : ''; ?>
-                                    <div class="d-inline-block me-1 mb-2">
-                                        <input class="btn-check" type="checkbox" name="notify_newfolder" id="notify_newfolder" autocomplete="off"<?php echo $formchecked; ?>>
-                                        <label class="btn btn-outline-primary tooltipper" for="notify_newfolder" data-bs-placement="top" data-bs-toggle="tooltip" title="<?php echo $setUp->getString("notify_newfolder"); ?>"><i class="bi bi-folder"></i></label>
-                                    </div>
-                                    <?php $formchecked = $setUp->getConfig('notify_registration') ? ' checked' : ''; ?>
-                                    <div class="d-inline-block me-1 mb-2">
-                                        <input class="btn-check" type="checkbox" name="notify_registration" id="notify_registration" autocomplete="off"<?php echo $formchecked; ?>>
-                                        <label class="btn btn-outline-primary tooltipper" for="notify_registration" data-bs-placement="top" data-bs-toggle="tooltip" title="<?php echo $setUp->getString("notify_registration"); ?>"><i class="bi bi-person-plus"></i></label>
-                                    </div>
-                                </div>
-                            </div> <!-- col sm 6 -->
-                        </div> <!-- row -->
-                        <span class="form-text">
-                            <?php echo $setUp->getString("set_email_to_receive_notifications"); ?>
-                        </span>
-                    </div><!-- col md 8 -->
+                            <div class="col-md-2">
+                                <button class="btn btn-primary tooltipper" 
+                                    for="notify_newfolder" data-bs-placement="top" data-bs-toggle="tooltip" title="<?php echo $setUp->getString("create_directory"); ?>">
+                                    <i class="bi bi-folder-plus"></i>
+                                </button>        
+                            </div>        
+                        </div>
+                    </div>
                 </div><!-- row -->
             </div><!-- box-body -->
             </div>
